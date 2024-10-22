@@ -38,6 +38,10 @@ class QueueTest
 		assertEquals("Hello", queueA.pop());
 		assertEquals("Hi", queueA.pop());
 		assertEquals("Greetings", queueA.pop());
+		
+		assertThrows(QueueUnderFlowException.class, () -> {
+			queueA.pop();
+		});
 	}
 	
 	@Test
