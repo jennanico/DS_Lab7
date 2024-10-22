@@ -39,5 +39,13 @@ class QueueTest
 		assertEquals("Hi", queueA.pop());
 		assertEquals("Greetings", queueA.pop());
 	}
+	
+	@Test
+	void testPushEmpty() 
+	{
+		queueA.push("Hello");
+		
+		assertEquals(false, queueA.isEmpty());
+	}
 
 }
